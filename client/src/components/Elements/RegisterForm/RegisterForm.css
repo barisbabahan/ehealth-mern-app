@@ -1,0 +1,18 @@
+.register-root-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  position: relative;
+  background-color: #ecfcff;
+}
+.register-title {
+  color: #3e64ff;
+  margin-bottom: 20px;
+}
+.register-input-element {
+  margin-bottom: 30px;
+}

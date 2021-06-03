@@ -1,0 +1,30 @@
+.services-root-container {
+  margin: 150px 0;
+}
+.section-title {
+  font-size: 52px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #3f64ff;
+}
+.service-content {
+  width: 60%;
+}
+.service-cards-container {
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 30px;
+  padding: 0 20px;
+}
+@media only screen and (max-width: 850px) {
+  .service-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 450px) {
+  .service-cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

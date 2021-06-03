@@ -1,0 +1,18 @@
+.about-us-section-container {
+  margin-top: 100px;
+  display: flex;
+}
+.aboutus-doctor-illustrator {
+  width: 400px;
+  margin-right: 50px;
+}
+@media only screen and (max-width: 760px) {
+  .about-us-section-container {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .aboutus-doctor-illustrator {
+    width: 100%;
+  }
+}

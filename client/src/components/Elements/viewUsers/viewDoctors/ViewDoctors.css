@@ -1,0 +1,9 @@
+.view-doctor-table-container {
+  width: 100vw;
+  height: calc(100vh - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 960px;
+  margin: auto;
+}

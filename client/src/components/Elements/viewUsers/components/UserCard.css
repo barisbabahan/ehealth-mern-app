@@ -1,0 +1,8 @@
+.card-root {
+  width: 800px;
+  display: flex;
+  margin: auto;
+  background-color: antiquewhite;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}

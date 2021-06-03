@@ -1,0 +1,22 @@
+.contactus-root-container {
+  margin: 100px 0 150px;
+}
+.form-items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+}
+.social-media-icons-cotnainer {
+  width: 100%;
+  display: flex;
+  margin-top: 50px;
+}
+.social-media-title {
+  margin-top: 50px;
+}
+.social-media-icon {
+  margin-right: 20px;
+  cursor: pointer;
+}

@@ -1,0 +1,49 @@
+.feedback-root-container {
+  margin-bottom: 150px;
+  width: 100%;
+}
+.feedbacks-container {
+  position: relative;
+  background-color: #b2fcff;
+  padding: 50px;
+}
+.feedback-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+.feedback-card-image img {
+  border-radius: 100%;
+  margin-right: 50px;
+  width: 200px;
+  height: 200px;
+}
+.feedback-cards-container {
+  border: 2px solid #fff;
+  width: 100%;
+  height: 100%;
+  color: #606470;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  display: flex;
+  padding: 10px;
+}
+.feedback-author {
+  opacity: 0.5;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 760px) {
+  .feedback-cards-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .feedback-card-image img {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+}

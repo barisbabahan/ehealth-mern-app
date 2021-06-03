@@ -1,0 +1,20 @@
+.add-doctor-form-container {
+  background-color: #ecfcff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.add-doctor-title {
+  color: #3e64ff;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.doctor-added-title {
+  color: #16c79a;
+  margin-bottom: 20px;
+}
+.add-doctor-input-element {
+  margin-bottom: 20px;
+}

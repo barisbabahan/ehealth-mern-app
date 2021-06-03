@@ -1,0 +1,38 @@
+.service-card-root {
+  background-color: #fff;
+  height: 200px;
+  padding: 15px;
+}
+.service-card-top-container {
+  display: flex;
+  align-items: center;
+}
+.service-card-icon {
+  margin-right: 20px;
+}
+.service-card-line {
+  border: none;
+  border-bottom: 2px solid #3e64ff;
+  width: 20px;
+  border-radius: 20%;
+  margin: 10px 0;
+}
+.service-card-icon img {
+  width: 32px;
+}
+.service-card-title {
+  color: #5edfff;
+}
+.service-card-content {
+  color: #606470;
+  font-weight: 600;
+  font-family: "Work Sans", sans-serif;
+}
+.service-card-root:hover {
+  border: 2px solid #5edfff;
+}
+@media only screen and (max-width: 850px) {
+  .service-card-root {
+    height: auto;
+  }
+}

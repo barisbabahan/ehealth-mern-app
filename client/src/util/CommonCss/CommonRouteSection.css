@@ -1,0 +1,15 @@
+.login-container-section {
+  text-align: center;
+  font-size: 24px;
+}
+.sections-max-width {
+  max-width: 1050px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+@media only screen and (max-width: 600px) {
+  .sections-max-width {
+    padding: 0 10px;
+  }
+}

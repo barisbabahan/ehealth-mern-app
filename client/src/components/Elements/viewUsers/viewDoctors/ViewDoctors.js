@@ -1,0 +1,61 @@
+import React, { useState, useEffect } from "react";
+import { getDoctors } from "../../../../api/viewUsers";
+import { deleteuser } from "../../../../api/doctor";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import Paper from "@material-ui/core/Paper";
+import UserCard from "../components/UserCard";
+import "./ViewDoctors.css";
+const ViewDoctors = () => {
+  const [doctors, setDoctors] = useState();
+  const fetchAllDoctors = async () => {
+    const { data } = await getDoctors();
+    setDoctors(data);
+  };
+
+  useEffect(() => {
+    fetchAllDoctors();
+  }, []);
+
+  const handleDelete = async (id) => {
+    await deleteuser(id);
+    fetchAllDoctors();
+  };
+
+  return (
+    <div className="view-doctor-table-container">
+      <TableContainer component={Paper}>
+        <Table aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Name</TableCell>
+              <TableCell align="right">Email</TableCell>
+              <TableCell align="right">Expertise</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {doctors &&
+              doctors.map((doctor) => {
+                return (
+                  <UserCard
+                    key={doctor._id}
+                    name={doctor.username}
+                    email={doctor.email}
+                    expertise={doctor.expertise}
+                    id={doctor._id}
+                    handleDelete={(id) => handleDelete(id)}
+                  />
+                );
+              })}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </div>
+  );
+};
+
+export default ViewDoctors;
