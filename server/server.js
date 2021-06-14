@@ -42,15 +42,12 @@ const port = 3001;
 app.use(cors());
 //Mongooose connection
 const mongoose = require("mongoose");
-mongoose.connect(
-  "mongodb+srv://baris:yagis.1999@ehealthdb.xv9sk.mongodb.net/ehealthDB?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true,
-  }
-);
+mongoose.connect(process.env.MONGO_SERVER, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true,
+});
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", function () {
